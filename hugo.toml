@@ -1,4 +1,4 @@
-baseURL = 'http://localhost:1313/'
+baseURL = 'https://blog.jankerzone.com/'
 languageCode = 'en'
 title = 'Blog Jankerzone'
 theme = 'PaperMod'
