@@ -1,8 +1,10 @@
-baseURL = 'https://example.org/'
+baseURL = 'http://localhost:1313/'
 languageCode = 'en'
-title = 'blog_v2'
+title = 'Blog Jankerzone'
 theme = 'PaperMod'
-paginate = 10
+
+[pagination]
+  pagerSize = 5
 
 enableRobotsTXT = true
 buildDrafts = false
@@ -26,16 +28,28 @@ enableInlineShortcodes = true
   url = '/posts/'
   weight = 2
 
+[[menu.main]]
+  identifier = 'about'
+  name = 'About'
+  url = '/pages/about/'
+  weight = 3
+
+[[menu.main]]
+  identifier = 'main-site'
+  name = 'Main Site'
+  url = 'https://jankerzone.com'
+  weight = 4
+
 [params]
   env = 'production'
-  title = 'blog_v2'
-  description = 'Notes and articles powered by PaperMod.'
-  author = 'Author Name'
-  DateFormat = '2006-01-02'
+  title = 'Blog Jankerzone'
+  description = 'Almost Curhat Barely Sharing.'
+  author = 'Robsan'
+  DateFormat = '02 Jan 2006'
   defaultTheme = 'auto'
   ShowReadingTime = true
-  ShowShareButtons = true
-  ShowPostNavLinks = true
+  ShowShareButtons = false
+  ShowPostNavLinks = false
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
   ShowRssButtonInSectionTermList = true
@@ -52,14 +66,18 @@ enableInlineShortcodes = true
     favicon = '/favicon.ico'
 
   [params.homeInfoParams]
-    Title = 'Welcome to blog_v2'
-    Content = """This site uses the PaperMod theme.
+    Title = 'Happy Reading!'
+    Content = """Feel free to explore our blog and discover new insights.
 
-Run `hugo new content posts/first-post.md` to add an article, then preview locally with `hugo server`."""
+Blog Jankerzone - Almost curhat barely sharing."""
 
   [[params.socialIcons]]
     name = 'github'
-    url = 'https://github.com/username'
+    url = 'https://github.com/jankerzone'
+
+    [[params.socialIcons]]
+      name = 'twitter'
+      url = 'https://twitter.com/jankerzone'
 
 [markup]
   [markup.highlight]
