@@ -53,8 +53,13 @@ Manual deploys without GitHub linking:
 # once per machine
 wrangler login
 
+# one-liner helper (production branch = master)
+./scripts/deploy.sh
+
+# or run the long-form commands manually
+rm -rf public
 hugo --gc --minify
-wrangler pages deploy public --project-name blog-v2 --branch production
+wrangler pages deploy public --project-name blog-v2 --branch master
 ```
 
 On first run Wrangler will create the `blog-v2` Pages project (reachable on the `*.pages.dev` subdomain). Map `blog.jankerzone.com` to this project in the Cloudflare dashboard to serve the custom domain.

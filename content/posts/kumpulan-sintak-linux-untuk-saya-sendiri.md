@@ -5,13 +5,10 @@ draft: false
 slug: kumpulan-sintak-linux-untuk-saya-sendiri
 aliases:
 - /2025/05/07/kumpulan-sintak-linux-untuk-saya-sendiri.html
-comments: true
+description: Saking bodohnya saya menggunakan terminal Linux, maka saya bikinkan untuk diri saya sendiri khususnya, dan rekan-rekan yang kebetulan mampir kesini, beberapa perintah yang sering digunakan dalam mengelola VPS.
+
 ---
 
-> Saking bodohnya saya menggunakan terminal Linux, maka saya bikinkan
-> untuk diri saya sendiri khususnya, dan rekan-rekan yang kebetulan
-> mampir kesini, beberapa perintah yang sering digunakan dalam mengelola
-> VPS.
 
 ![ilustrasi](https://miro.medium.com/v2/resize:fit:1050/format:webp/0*3WgriVmfY3ULMbxm.png)
 
@@ -43,8 +40,9 @@ comments: true
 ![enter image description here](https://miro.medium.com/v2/resize:fit:1262/format:webp/0*JVjlDqT5Vz13iSC1.png)
 
 	chown -R apache:apache [url]
-### dan
-chmod +x [url]
+dan
+
+  ```chmod +x [url]```
 
 ### Remove Bulk/Folder
 	rm -rf [path]
@@ -89,9 +87,9 @@ chmod +x [url]
 
 	tar -xvf kompresan.tar
 ### Setting Permision dan Owner pada Wordpress
-	chown www-data:www-data  -R * # Jadiin apache ownernya  
-	find . -type d -exec chmod 755 {} \;   
-	find . -type f -exec chmod 644 {} \; #jadiin semua folder/files kebaca username, kecuali wp-content dia harus dibaca juga sama apachechown <username>:<username>  -R * # Let your useraccount be owner  
+	chown www-data:www-data  -R * # Jadiin apache ownernya
+	find . -type d -exec chmod 755 {} \;
+	find . -type f -exec chmod 644 {} \; #jadiin semua folder/files kebaca username, kecuali wp-content dia harus dibaca juga sama apachechown <username>:<username>  -R * # Let your useraccount be owner
 	chown www-data:www-data wp-content # Let apache be owner of wp-contentchmod -R 775 wp-content/
 
 ### Baca-baca dulu soal Cron dan Crontab
@@ -106,7 +104,7 @@ chmod +x [url]
 ### Instalasi OpenVPN
 
 	wget https://git.io/vpn -O openvpn-install.sh
-	sudo chmod +x openvpn-install.sh  
+	sudo chmod +x openvpn-install.sh
 	sudo bash openvpn-install.sh
 
 ikuti langkah-langkah instalasi
@@ -119,8 +117,8 @@ ikuti langkah-langkah instalasi
 
 Install at Ubuntu
 
-	sudo apt purge youtube-dl   
-	sudo pip3 install youtube-dl  
+	sudo apt purge youtube-dl
+	sudo pip3 install youtube-dl
 	hash youtube-dl
 
 Ketika mendapatkan Forbidden
@@ -137,8 +135,8 @@ Ketika mendapatkan Forbidden
 
 Download berdasarkan format
 
-	yt-dlp --list-formats link-youtube  
-	  
+	yt-dlp --list-formats link-youtube
+
 	yt-dlp -f 22 link-youtube
 
 ### Dump mySQL
@@ -152,4 +150,3 @@ Download berdasarkan format
 ### **Pulling git without entering passphare**
 
 	ssh-add ~/.ssh/id_rsa
-  
