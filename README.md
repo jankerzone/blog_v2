@@ -44,3 +44,17 @@ hugo --gc --minify
 ```
 
 The static site will be written to `public/`. Deploy the contents of that folder to GitHub Pages, Netlify, Cloudflare Pages, or any static host. Continuous deployment can watch the repo and run the same build command.
+
+### Cloudflare Pages via Wrangler
+
+Manual deploys without GitHub linking:
+
+```bash
+# once per machine
+wrangler login
+
+hugo --gc --minify
+wrangler pages deploy public --project-name blog-v2 --branch production
+```
+
+On first run Wrangler will create the `blog-v2` Pages project (reachable on the `*.pages.dev` subdomain). Map `blog.jankerzone.com` to this project in the Cloudflare dashboard to serve the custom domain.
