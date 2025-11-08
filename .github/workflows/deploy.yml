@@ -2,9 +2,9 @@ name: Deploy to Cloudflare Pages
 
 on:
   push:
-    branches: [ master, main ]
+    branches: [ master ]
   pull_request:
-    branches: [ master, main ]
+    branches: [ master ]
 
 jobs:
   deploy:
@@ -37,18 +37,8 @@ jobs:
         CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
       run: |
-        if [ "${{ github.ref_name }}" = "main" ]; then
-          echo "Deploying to production..."
-          wrangler pages deploy public \
-            --project-name "blog-v2" \
-            --branch "main" \
-            --commit-hash "${{ github.sha }}" \
-            --commit-message "${{ github.event.head_commit.message }}"
-        else
-          echo "Deploying to preview..."
-          wrangler pages deploy public \
-            --project-name "blog-v2" \
-            --branch "${{ github.ref_name }}" \
-            --commit-hash "${{ github.sha }}" \
-            --commit-message "${{ github.event.head_commit.message }}"
-        fi
+        wrangler pages deploy public \
+          --project-name "blog-v2" \
+          --branch "master" \
+          --commit-hash "${{ github.sha }}" \
+          --commit-message "${{ github.event.head_commit.message }}"
