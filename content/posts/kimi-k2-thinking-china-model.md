@@ -6,8 +6,6 @@ tags: ["AI", "China", "Language Model", "Kimi", "Technology"]
 categories: ["Technology"]
 ---
 
-# Model LM China Kimi K2 Thinking yang Menghebohkan Dunia
-
 Beberapa hari terakhir, dunia teknologi kembali dihebohkan dengan kehadiran model bahasa terbaru dari China - **Kimi K2 Thinking**. Model ini menjanjikan kemampuan reasoning yang jauh lebih baik dibanding pendahulunya.
 
 ## Apa itu Kimi K2 Thinking?

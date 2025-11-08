@@ -1,6 +1,6 @@
 +++
 date = '2025-11-08T17:58:24+07:00'
-draft = true
+draft = false
 title = 'Dari Perekam Suara Jadi Pengguna: Perjalanan Seorang Developer di Era LLM'
 +++
 
