@@ -39,6 +39,7 @@ jobs:
       run: |
         wrangler pages deploy public \
           --project-name "blog-v2" \
-          --branch "${{ github.ref_name }}" \
+          --branch "production" \
           --commit-hash "${{ github.sha }}" \
-          --commit-message "${{ github.event.head_commit.message }}"
+          --commit-message "${{ github.event.head_commit.message }}" \
+          --production-branch "main"
